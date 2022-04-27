@@ -14,31 +14,35 @@
 
 .header {
   width: 100%;
-  heigth: 200px;
-  font-family: Montserrat, Verdana, sans-serif;
-  margin-bottom: 20px; }
+  font-family: Montserrat, Verdana, sans-serif; }
   .header .header_message {
-    height: 25px;
     font-size: 18px;
     text-align: center;
     color: #c4c4c4;
     font-weight: 700;
-    border-bottom: 1px solid #c4c4c4; }
-  .header .content {
-    height: 200px;
     border-bottom: 1px solid #c4c4c4;
-    padding: 0 120px; }
+    padding: 3px; }
+  .header .content {
+    height: fit-content;
+    border-bottom: 1px solid #c4c4c4;
+    padding: 20px 120px; }
     .header .content .header_item {
       margin: 0 auto;
       height: 150px; }
     .header .content .header_logo img {
       width: 325px;
       display: block; }
+      @media screen and (max-width: 760px) {
+        .header .content .header_logo img {
+          width: 200px; } }
     .header .content .header_contact {
       font-size: 16px;
       font-weight: 500; }
       .header .content .header_contact span {
         display: block; }
+      @media screen and (max-width: 1300px) {
+        .header .content .header_contact {
+          display: none; } }
     .header .content .header_menu .menu {
       display: grid;
       grid-template-columns: repeat(4, 120px);
@@ -52,6 +56,14 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         text-align: center;
         cursor: pointer; }
+        .header .content .header_menu .menu .menu_item a {
+          text-decoration: none;
+          color: black; }
+      @media screen and (max-width: 760px) {
+        .header .content .header_menu .menu {
+          grid-template-columns: repeat(4, 120px);
+          grid-template-rows: repeat(2, 25px);
+          grid-gap: 10px 25px; } }
     .header .content .header_menu .search_bar input {
       width: 100%;
       height: 50px;
@@ -74,5 +86,10 @@
     .header .content .header_buttons .basket_chosen_login {
       display: flex;
       justify-content: space-around; }
+    @media screen and (max-width: 760px) {
+      .header .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; } }
 
 /*# sourceMappingURL=header.css.map */
