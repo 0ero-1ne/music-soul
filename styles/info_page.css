@@ -17,8 +17,11 @@
       padding: 20px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       font-size: 24px;
-      font-weight: regular; }
+      font-weight: regular;
+      border: 1px solid #c4c4c4; }
       .main .content .info_block p {
         margin: 10px 0; }
+      .main .content .info_block ol, .main .content .info_block ul {
+        margin-left: 35px; }
 
 /*# sourceMappingURL=info_page.css.map */

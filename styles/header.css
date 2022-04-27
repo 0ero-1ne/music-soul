@@ -58,7 +58,9 @@
         cursor: pointer; }
         .header .content .header_menu .menu .menu_item a {
           text-decoration: none;
-          color: black; }
+          color: black;
+          width: 100%;
+          display: block; }
       @media screen and (max-width: 760px) {
         .header .content .header_menu .menu {
           grid-template-columns: repeat(4, 120px);
