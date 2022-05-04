@@ -1,5 +1,6 @@
 .footer .content {
   display: flex;
+  justify-content: space-around;
   align-items: center; }
 
 .footer .content .social_block .media_pictures {
@@ -7,7 +8,7 @@
   align-items: center;
   justify-content: end; }
 
-.footer .content .work_time, .footer .content .social_block {
+.footer .content .work_time, .footer .content .footer_contact, .footer .content .social_block {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
@@ -41,9 +42,10 @@
         color: #7481ED; }
       .footer .content .licenses a:hover {
         color: #7400ED; }
+    .footer .content .footer_contact {
+      font-weight: 500; }
     .footer .content .social_block {
-      text-align: right;
-      margin-left: auto; }
+      text-align: right; }
       .footer .content .social_block .media_pictures .media_picture img {
         display: block;
         width: 50px;

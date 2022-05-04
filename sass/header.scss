@@ -32,11 +32,12 @@ $bord_bot_c4: 1px solid #c4c4c4;
 
 	.content {
 		@extend %flex_center_center;
+		justify-content: center;
 		height: fit-content;
 		border-bottom: $bord_bot_c4;
 		padding: 20px 120px;
 
-		.header_item {margin: 0 auto; height: 150px;}
+		.header_item {margin: 0 5px; height: 150px;}
 	
 		.header_logo img {
 			width: 325px;
@@ -44,18 +45,6 @@ $bord_bot_c4: 1px solid #c4c4c4;
 
 			@media screen and (max-width: 760px) {
 				width: 200px;
-			}
-		}
-	
-		.header_contact {
-			@extend %flex_column_between;
-			font-size: 16px;
-			font-weight: 500;
-
-			span {display: block;}
-
-			@media screen and (max-width: 1300px) {
-				display: none;
 			}
 		}
 

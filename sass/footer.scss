@@ -1,5 +1,6 @@
-%flex_center {
+%flex_around_center {
 	display: flex;
+	justify-content: space-around;
 	align-items: center;
 }
 
@@ -31,7 +32,7 @@
 
 	.content {
 		width: 100%;
-		@extend %flex_center;
+		@extend %flex_around_center;
 		padding: 0 120px;
 
 		.footer_item {height: 200px; padding: 20px 0}
@@ -56,10 +57,14 @@
 			}
 		}
 
+		.footer_contact {
+			@extend %flex_column_between;
+			font-weight: 500;
+		}
+
 		.social_block {
 			@extend %flex_column_between;
 			text-align: right;
-			margin-left: auto;
 
 			.media_pictures {
 				@extend %flex_center_end;
