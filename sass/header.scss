@@ -5,12 +5,6 @@ $bord_bot_c4: 1px solid #c4c4c4;
 	align-items: center;
 }
 
-%flex_column_between {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
 * {
 	margin: 0;
 	padding: 0;
@@ -32,28 +26,53 @@ $bord_bot_c4: 1px solid #c4c4c4;
 	}
 
 	.header_search {
+		@extend %flex_center_center;
+		justify-content: space-between;
 		width: 100%;
 		padding: 10px;
 
-		.search_bar input {
-			height: 50px;
-			width: 100%;
-			display: block;
-			border-radius: 25px;
-			padding: 15px;
-			border: 1px solid #c4c4c4;
+		.search_bar {
+			flex-basis: 70%;
+
+			input {
+				height: 50px;
+				width: 100%;
+				display: block;
+				border-radius: 25px;
+				padding: 15px;
+				border: 1px solid #c4c4c4;
+				font-size: 18px;
+				font-weight: 400;
+			}
+		}
+
+		.basket_chosen_login {
+			flex-basis: 15%;
+
+			a {
+				margin: 0 10px;
+			}
+		}
+
+		.leave_comment {
+			flex-basis: 15%;
+			height: 60px;
+			background: #E47231;
+			color: white;
+			border-radius: 30px;
 			font-size: 18px;
-			font-weight: 400;
+			font-weight: bold;
+			text-align: center;
+			padding-top: 18px;
 		}
 	}
 
 	.content {
 		@extend %flex_center_center;
-		justify-content: center;
-		margin: 0 auto;
+		justify-content: space-between;
 		padding: 20px 10px;
 
-		.header_item {height: 150px; margin: 0 5px;}
+		.header_item {margin: 0 5px;}
 	
 		.header_logo img {
 			width: 325px;
@@ -61,12 +80,10 @@ $bord_bot_c4: 1px solid #c4c4c4;
 		}
 
 		.header_menu {
-			@extend %flex_column_between;
-		
 			.menu {
 				display: grid;
-				grid-template-columns: repeat(4, 120px);
-				grid-template-rows: repeat(2, 25px);
+				grid-template-columns: repeat(2, 120px);
+				grid-template-rows: repeat(4, 25px);
 				grid-gap: 10px 25px;
 
 				.menu_item {
@@ -85,27 +102,6 @@ $bord_bot_c4: 1px solid #c4c4c4;
 						display: block;
 					}			
 				}
-			}
-		}
-
-		.header_buttons {
-			@extend %flex_column_between;
-			
-			.leave_comment {
-				width: 210px;
-				height: 60px;
-				background: #E47231;
-				color: white;
-				border-radius: 30px;
-				font-size: 18px;
-				font-weight: bold;
-				text-align: center;
-				padding-top: 18px;
-			}
-
-			.basket_chosen_login {
-				display: flex;
-				justify-content: space-around;
 			}
 		}
 	}
