@@ -1,20 +1,15 @@
 $bord_bot_c4: 1px solid #c4c4c4;
 
-%flex_center_center {
-	display: flex;
-	align-items: center;
-}
-
 * {
-	margin: 0;
 	padding: 0;
+	margin: 0;
 	box-sizing: border-box;
 }
 
 .header {
 	width: 100%;
-	border-bottom: $bord_bot_c4;
 	font-family: Montserrat, Verdana, sans-serif;
+	border-bottom: $bord_bot_c4;
 
 	.header_message {
 		font-size: 18px;
@@ -23,84 +18,139 @@ $bord_bot_c4: 1px solid #c4c4c4;
 		font-weight: 700;
 		border-bottom: $bord_bot_c4;
 		padding: 3px;
-	}
 
-	.header_search {
-		@extend %flex_center_center;
-		justify-content: space-between;
-		width: 100%;
-		padding: 10px;
-
-		.search_bar {
-			flex-basis: 70%;
-
-			input {
-				height: 50px;
-				width: 100%;
-				display: block;
-				border-radius: 25px;
-				padding: 15px;
-				border: 1px solid #c4c4c4;
-				font-size: 18px;
-				font-weight: 400;
-			}
-		}
-
-		.basket_chosen_login {
-			flex-basis: 15%;
-
-			a {
-				margin: 0 10px;
-			}
-		}
-
-		.leave_comment {
-			flex-basis: 15%;
-			height: 60px;
-			background: #E47231;
-			color: white;
-			border-radius: 30px;
-			font-size: 18px;
-			font-weight: bold;
-			text-align: center;
-			padding-top: 18px;
+		@media screen and (max-width: 460px) {
+			display: none;
 		}
 	}
 
 	.content {
-		@extend %flex_center_center;
-		justify-content: space-between;
-		padding: 20px 10px;
+		padding: 10px 5px;
 
-		.header_item {margin: 0 5px;}
-	
-		.header_logo img {
-			width: 325px;
-			display: block;
+		.header_logo_buttons {
+			margin-bottom: 15px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.leave_comment {
+				width: 220px;
+				height: 60px;
+				background: #E47231;
+				color: white;
+				border-radius: 30px;
+				font-size: 18px;
+				font-weight: bold;
+				text-align: center;
+				padding-top: 18px;
+				margin: 0 10px;
+				cursor: pointer;
+			}
+
+			.header_logo {
+				margin: 0 10px;
+
+				img {
+					width: 325px;
+					display: block;
+				}
+			}
+
+			.basket_chosen_login {
+				display: flex;
+				margin: 0 10px;
+
+				a {
+					display: block;
+					margin: 0 10px;
+					text-decoration: none;
+					color: black;
+
+					img {margin-right: 5px;}
+				}
+			}
+
+			@media screen and (max-width: 1170px){
+				flex-direction: column;
+
+				.leave_comment {margin: 10px 0;}
+				.header_logo {margin: 10px 0;}
+				.basket_chosen_login {margin: 10px 0;}
+			}
 		}
 
-		.header_menu {
-			.menu {
-				display: grid;
-				grid-template-columns: repeat(2, 120px);
-				grid-template-rows: repeat(4, 25px);
-				grid-gap: 10px 25px;
+		.menu_search {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 
-				.menu_item {
+			.search_bar {
+				width: 100%;
+				margin-right: 5px;
+
+				input {
+					height: 50px;
+					width: 100%;
+					display: block;
+					border-radius: 25px;
+					padding: 15px;
 					border: 1px solid #c4c4c4;
-					border-radius: 5px;
 					font-size: 18px;
 					font-weight: 400;
-					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+					&:focus {
+						outline: 1px solid #42A5BC;
+						border: none;
+					}
+				}
+			}
+
+			.header_menu {
+				display: grid;
+				grid-template-columns: repeat(8, 120px);
+				grid-template-rows: 30px;
+				gap: 5px;
+
+				.menu_item{
+					font-weight: 400;
+					font-size: 20px;
 					text-align: center;
-					cursor: pointer;
-				
+
 					a {
-						text-decoration: none;
-						color: black;
-						width: 100%;
 						display: block;
-					}			
+						color: grey;
+						transition: 0.1s;
+						text-decoration: none;
+
+						&:hover {
+							color: black;
+						}
+					}
+				}
+			}
+
+			@media screen and (min-width: 380px) and (max-width: 1300px) {
+				.header_menu {
+					grid-template-columns: repeat(4, 120px);
+					grid-template-rows: 30px 30px;
+				}
+			}
+
+			@media screen and (min-width: 380px) and (max-width: 799px) {
+				flex-direction: column;
+
+				.search_bar {
+					margin-bottom: 10px;
+					margin-right: 0;
+				}
+			}
+
+			@media screen and (max-width: 490px) {
+				flex-direction: column;
+
+				.header_menu {
+					grid-template-columns: repeat(3, 1fr);
+					grid-template-rows: 30px 30px 30px;
 				}
 			}
 		}
