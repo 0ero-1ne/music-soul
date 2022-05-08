@@ -6,11 +6,11 @@
 
 .main {
 	width: 100%;
-	margin: 40px 0;
+	margin: 40px 0 0;
+	padding: 10px;
 	font-family: Montserrat, Verdana, sans-serif;
 
 	.content {
-		padding: 0 120px;
 		width: 100%;
 
 		.greeting {
@@ -21,11 +21,24 @@
 				font-family: Monda, Montserrat;
 				font-size: 50px;
 				font-weight: 700;
+
+
+				@media screen and (min-width: 400px) and (max-width: 599px) {
+					font-size: 40px;
+				}
+
+				@media screen and (min-width: 200px) and (max-width: 399px) {
+					font-size: 30px;
+				}
 			}
 
 			p {
 				font-size: 18px;
 				font-weight: regular;
+
+				@media screen and (min-width: 200px) and (max-width: 399px) {
+					font-size: 16px;
+				}
 			}
 		}
 
@@ -71,9 +84,14 @@
 					z-index: 2;
 				}
 
-				@media screen and (min-width: 700px) and (max-width: 1100px) {
+				@media screen and (min-width: 600px) and (max-width: 1200px) {
 					grid-template-columns: repeat(2, 1fr);
 					grid-template-rows: repeat(4, 1fr);
+				}
+
+				@media screen and (max-width: 599px) {
+					grid-template-columns: repeat(1, 1fr);
+					grid-template-rows: repeat(8, 1fr);	
 				}
 			}
 		}
@@ -87,6 +105,15 @@
 			p {
 				font-size: 48px;
 				font-weight: regular;
+				margin-bottom: 10px;
+
+				@media screen and (min-width: 200px) and (max-width: 399px) {
+					font-size: 28px;
+				}
+
+				@media screen and (min-width: 400px) and (max-width: 599px) {
+					font-size: 28px;
+				}
 			}
 
 			ol {
@@ -96,11 +123,19 @@
 				li {
 					margin-bottom: 10px;
 				}
+
+				@media screen and (min-width: 200px) and (max-width: 399px) {
+					font-size: 16px;
+				}
+
+				@media screen and (min-width: 400px) and (max-width: 599px) {
+					font-size: 18px;
+				}
 			}
 		}
 
 		.main_reputation {
-			margin: 40px 0;
+			margin: 40px 0 10px;
 			padding: 10px;
 
 			p {
@@ -108,6 +143,14 @@
 				font-weight: regular;
 				margin-bottom: 40px;
 				text-align: center;
+
+				@media screen and (min-width: 200px) and (max-width: 399px) {
+					font-size: 28px;
+				}
+
+				@media screen and (min-width: 400px) and (max-width: 599px) {
+					font-size: 38px;
+				}
 			}
 
 			.musical_groups {
@@ -118,13 +161,32 @@
 				margin-bottom: 40px;
 
 				.musical_group {
-					border-radius: 100%;
-					margin: 10px;
+					margin: 10px 20px;
+					text-align: center;
 
 					img {
 						display: block;
 						width: 200px;
 						border-radius: 100%;
+						margin: 0 auto;
+					
+						@media screen and (min-width: 200px) and (max-width: 419px) {
+							width: 100px;
+						}
+
+						@media screen and (min-width: 420px) and (max-width: 599px) {
+							width: 150px;
+						}
+					}
+
+					figcaption {
+						margin-top: 5px;
+						font-size: 20px;
+						font-weight: 500;
+
+						@media screen and (min-width: 200px) and (max-width: 599px) {
+							font-size: 16px;
+						}
 					}
 				}
 			}

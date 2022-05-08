@@ -11,7 +11,7 @@
 
 	.content {
 		width: 100%;
-		padding: 0 120px;
+		padding: 10px;
 
 		h1 {text-align: center;}
 
@@ -29,6 +29,14 @@
 
 			ol, ul {
 				margin-left: 35px;
+			}
+
+			@media screen and (min-width: 200px) and (max-width: 399px) {
+				font-size: 16px;
+			}
+
+			@media screen and (min-width: 400px) and (max-width: 599px) {
+				font-size: 18px;
 			}
 		}
 	}

@@ -9,7 +9,7 @@
   font-family: Montserrat, Verdana, sans-serif; }
   .main .content {
     width: 100%;
-    padding: 0 120px; }
+    padding: 10px; }
     .main .content h1 {
       text-align: center; }
     .main .content .info_block {
@@ -23,5 +23,11 @@
         margin: 10px 0; }
       .main .content .info_block ol, .main .content .info_block ul {
         margin-left: 35px; }
+      @media screen and (min-width: 200px) and (max-width: 399px) {
+        .main .content .info_block {
+          font-size: 16px; } }
+      @media screen and (min-width: 400px) and (max-width: 599px) {
+        .main .content .info_block {
+          font-size: 18px; } }
 
 /*# sourceMappingURL=info_page.css.map */
