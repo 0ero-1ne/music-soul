@@ -1,6 +1,6 @@
 .footer .content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center; }
 
 .footer .content .social_block .media_pictures {
@@ -20,19 +20,16 @@
 
 .footer {
   width: 100%;
-  height: 200px;
+  padding: 10px;
   font-family: Montserrat, Verdana, sans-serif;
   border-top: 1px solid #c4c4c4;
   border-bottom: 1px solid #c4c4c4;
   margin-bottom: 20px; }
   .footer .content {
-    width: 100%;
-    padding: 0 120px; }
+    width: 100%; }
     .footer .content .footer_item {
       height: 200px;
       padding: 20px 0; }
-    .footer .content .work_time {
-      margin-right: 50px; }
     .footer .content .licenses {
       display: flex;
       flex-direction: column;
@@ -46,9 +43,34 @@
       font-weight: 500; }
     .footer .content .social_block {
       text-align: right; }
-      .footer .content .social_block .media_pictures .media_picture img {
+      .footer .content .social_block .media_pictures img {
         display: block;
         width: 50px;
         margin-left: 10px; }
+    @media screen and (min-width: 500px) and (max-width: 1049px) {
+      .footer .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px; }
+        .footer .content .footer_item {
+          text-align: center; }
+        .footer .content .social_block {
+          text-align: center; }
+          .footer .content .social_block .media_pictures {
+            justify-content: center; }
+            .footer .content .social_block .media_pictures img {
+              margin: 0 10px; } }
+    @media screen and (min-width: 200px) and (max-width: 499px) {
+      .footer .content {
+        flex-direction: column;
+        align-items: center; }
+        .footer .content .footer_item {
+          text-align: center; }
+        .footer .content .social_block {
+          text-align: center; }
+          .footer .content .social_block .media_pictures {
+            justify-content: center; }
+            .footer .content .social_block .media_pictures img {
+              margin: 0 10px; } }
 
 /*# sourceMappingURL=footer.css.map */

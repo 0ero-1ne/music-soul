@@ -1,3 +1,8 @@
+.header .content .header_logo_buttons .header_contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
 * {
   padding: 0;
   margin: 0;
@@ -18,7 +23,7 @@
       .header .header_message {
         display: none; } }
   .header .content {
-    padding: 10px 5px; }
+    padding: 10px; }
     .header .content .header_logo_buttons {
       margin-bottom: 15px;
       display: flex;
@@ -48,10 +53,16 @@
           display: block;
           margin: 0 10px;
           text-decoration: none;
-          color: black; }
-          .header .content .header_logo_buttons .basket_chosen_login a img {
-            margin-right: 5px; }
-      @media screen and (max-width: 1170px) {
+          color: black;
+          text-align: center; }
+      .header .content .header_logo_buttons .header_contacts {
+        height: 150px;
+        font-weight: 500;
+        margin: 0 10px; }
+        @media screen and (max-width: 1095px) {
+          .header .content .header_logo_buttons .header_contacts {
+            display: none; } }
+      @media screen and (max-width: 850px) {
         .header .content .header_logo_buttons {
           flex-direction: column; }
           .header .content .header_logo_buttons .leave_comment {
@@ -99,7 +110,7 @@
         .header .content .menu_search .header_menu {
           grid-template-columns: repeat(4, 120px);
           grid-template-rows: 30px 30px; } }
-      @media screen and (min-width: 380px) and (max-width: 799px) {
+      @media screen and (min-width: 200px) and (max-width: 799px) {
         .header .content .menu_search {
           flex-direction: column; }
           .header .content .menu_search .search_bar {

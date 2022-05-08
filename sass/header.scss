@@ -1,5 +1,11 @@
 $bord_bot_c4: 1px solid #c4c4c4;
 
+%flex_column_between {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -25,7 +31,7 @@ $bord_bot_c4: 1px solid #c4c4c4;
 	}
 
 	.content {
-		padding: 10px 5px;
+		padding: 10px;
 
 		.header_logo_buttons {
 			margin-bottom: 15px;
@@ -65,12 +71,20 @@ $bord_bot_c4: 1px solid #c4c4c4;
 					margin: 0 10px;
 					text-decoration: none;
 					color: black;
-
-					img {margin-right: 5px;}
+					text-align: center;
 				}
 			}
 
-			@media screen and (max-width: 1170px){
+			.header_contacts {
+				@extend %flex_column_between;
+				height: 150px;
+				font-weight: 500;
+				margin: 0 10px;
+
+				@media screen and (max-width: 1095px) {display: none;}
+			}
+
+			@media screen and (max-width: 850px){
 				flex-direction: column;
 
 				.leave_comment {margin: 10px 0;}
@@ -136,7 +150,7 @@ $bord_bot_c4: 1px solid #c4c4c4;
 				}
 			}
 
-			@media screen and (min-width: 380px) and (max-width: 799px) {
+			@media screen and (min-width: 200px) and (max-width: 799px) {
 				flex-direction: column;
 
 				.search_bar {
