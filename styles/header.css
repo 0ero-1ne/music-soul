@@ -44,7 +44,7 @@
       .header .content .header_logo_buttons .header_logo {
         margin: 0 10px; }
         .header .content .header_logo_buttons .header_logo img {
-          width: 325px;
+          width: 320px;
           display: block; }
           @media screen and (min-width: 750px) and (max-width: 1095px) {
             .header .content .header_logo_buttons .header_logo img {
@@ -62,7 +62,7 @@
         height: 150px;
         font-weight: 500;
         margin: 0 10px; }
-        @media screen and (max-width: 1095px) {
+        @media screen and (max-width: 1110px) {
           .header .content .header_logo_buttons .header_contacts {
             display: none; } }
       @media screen and (min-width: 200px) and (max-width: 749px) {

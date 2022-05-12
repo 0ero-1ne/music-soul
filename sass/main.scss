@@ -76,6 +76,12 @@
 						font-weight: regular;
 						color: white;
 						text-align: center;
+
+						a {
+							color: white;
+							text-decoration: none;
+							display: block;
+						}
 					}
 				}
 
@@ -164,6 +170,8 @@
 				.musical_group {
 					margin: 10px 20px;
 					text-align: center;
+					transition: ease-in-out 2s;
+					cursor: pointer;
 
 					img {
 						display: block;
@@ -186,9 +194,13 @@
 						font-weight: 500;
 
 						@media screen and (min-width: 200px) and (max-width: 599px) {
-							font-size: 16px;
+							font-size: 15px;
 						}
 					}
+				}
+
+				.musical_group:hover {
+					transform: rotate(360deg);
 				}
 			}
 		}

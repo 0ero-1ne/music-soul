@@ -26,7 +26,8 @@
   border-bottom: 1px solid #c4c4c4;
   margin-bottom: 20px; }
   .footer .content {
-    width: 100%; }
+    width: 100%;
+    justify-content: space-around; }
     .footer .content .footer_item {
       height: 200px;
       padding: 20px 0; }
@@ -43,11 +44,13 @@
       font-weight: 500; }
     .footer .content .social_block {
       text-align: right; }
-      .footer .content .social_block .media_pictures img {
-        display: block;
-        width: 50px;
-        margin-left: 10px; }
-    @media screen and (min-width: 500px) and (max-width: 1049px) {
+      .footer .content .social_block .media_pictures {
+        margin-top: 5px; }
+        .footer .content .social_block .media_pictures img {
+          display: block;
+          width: 50px;
+          margin-left: 10px; }
+    @media screen and (min-width: 500px) and (max-width: 1070px) {
       .footer .content {
         display: grid;
         grid-template-columns: 1fr 1fr;

@@ -33,6 +33,7 @@
 	.content {
 		width: 100%;
 		@extend %flex_between_center;
+		justify-content: space-around;
 
 		.footer_item {height: 200px; padding: 20px 0;}
 	
@@ -66,6 +67,7 @@
 
 			.media_pictures {
 				@extend %flex_center_end;
+				margin-top: 5px;
 
 				img {
 					display: block;
@@ -75,7 +77,7 @@
 			}
 		}
 
-		@media screen and (min-width: 500px) and ( max-width: 1049px) {
+		@media screen and (min-width: 500px) and ( max-width: 1070px) {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: 200px 200px;
