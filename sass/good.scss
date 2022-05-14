@@ -8,8 +8,15 @@
 	margin: 10px 0;
 
 	h1 {
+		padding-left: 10px;
+		font-size: 28px;
 		@media screen and (max-width: 625px) {
 			font-size: 26px;
+		}
+
+		a {
+			color: darkgrey;
+			text-decoration: none;
 		}
 	}
 
@@ -162,8 +169,12 @@
 			width: 100%;
 			margin-bottom: 20px;
 
+			h2 {
+				padding-left: 10px;
+			}
+
 			.description {
-				padding: 10px;
+				padding: 20px;
 
 				p {
 					margin: 10px 0;
@@ -189,6 +200,7 @@
 
 			h2 {
 				font-size: 30px;
+				padding-left: 10px;
 				@media screen and (max-width: 625px) {
 					font-size: 26px;
 				}
@@ -256,6 +268,7 @@
 
 		.gratitude {
 			margin-bottom: 20px;
+			padding-left: 10px;
 			@media screen and (max-width: 625px) {
 				font-size: 16px;
 			}

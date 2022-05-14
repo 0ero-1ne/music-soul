@@ -86,17 +86,17 @@
 				}
 
 				.catalog_item:hover {
-					transform: scale(1.2);
+					transform: scale(1.1);
 					z-index: 2;
 				}
 
-				@media screen and (min-width: 600px) and (max-width: 1200px) {
+				@media screen and (min-width: 631px) and (max-width: 1200px) {
 					grid-template-columns: repeat(2, 1fr);
 					grid-template-rows: repeat(4, 1fr);
 				}
 
 				@media screen and (max-width: 630px) {
-					grid-template-columns: repeat(1, 0.5fr);
+					grid-template-columns: repeat(1, 1fr);
 					grid-template-rows: repeat(8, 1fr);
 					justify-content: center;
 				}
@@ -170,7 +170,7 @@
 				.musical_group {
 					margin: 10px 20px;
 					text-align: center;
-					transition: ease-in-out 2s;
+					transition: ease-in-out 0.5s;
 					cursor: pointer;
 
 					img {
@@ -200,7 +200,7 @@
 				}
 
 				.musical_group:hover {
-					transform: rotate(360deg);
+					transform: scale(1.15);
 				}
 			}
 		}

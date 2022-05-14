@@ -5,9 +5,15 @@
 
 .main {
   margin: 10px 0; }
-  @media screen and (max-width: 625px) {
-    .main h1 {
-      font-size: 26px; } }
+  .main h1 {
+    padding-left: 10px;
+    font-size: 28px; }
+    @media screen and (max-width: 625px) {
+      .main h1 {
+        font-size: 26px; } }
+    .main h1 a {
+      color: darkgrey;
+      text-decoration: none; }
   .main .content {
     width: 100%;
     padding: 10px;
@@ -116,8 +122,10 @@
     .main .content .good_description {
       width: 100%;
       margin-bottom: 20px; }
+      .main .content .good_description h2 {
+        padding-left: 10px; }
       .main .content .good_description .description {
-        padding: 10px; }
+        padding: 20px; }
         .main .content .good_description .description p {
           margin: 10px 0;
           font-size: 16px;
@@ -133,7 +141,8 @@
       width: 100%;
       margin-bottom: 20px; }
       .main .content .others_goods h2 {
-        font-size: 30px; }
+        font-size: 30px;
+        padding-left: 10px; }
         @media screen and (max-width: 625px) {
           .main .content .others_goods h2 {
             font-size: 26px; } }
@@ -181,7 +190,8 @@
               .main .content .others_goods .goods_catalog .good .good_title {
                 margin-bottom: 10px; } }
     .main .content .gratitude {
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      padding-left: 10px; }
       @media screen and (max-width: 625px) {
         .main .content .gratitude {
           font-size: 16px; } }

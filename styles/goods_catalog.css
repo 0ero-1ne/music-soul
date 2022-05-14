@@ -12,6 +12,9 @@
     font-family: Montserrat, Verdana, sans-serif; }
     .main .content h1 {
       text-align: center; }
+      .main .content h1 a {
+        text-decoration: none;
+        color: black; }
     .main .content .filters {
       margin-top: 10px;
       padding: 10px; }
@@ -34,6 +37,9 @@
           .main .content .filters .filters_row .filter:hover {
             box-shadow: 0px 4px 3px 1px rgba(138, 69, 69, 0.6);
             transform: scale(1.1); }
+          .main .content .filters .filters_row .filter a {
+            text-decoration: none;
+            color: black; }
           @media screen and (max-width: 800px) {
             .main .content .filters .filters_row .filter {
               font-size: 13px;
