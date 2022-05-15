@@ -32,7 +32,9 @@
         background: #e47231;
         text-decoration: none;
         display: block;
-        padding: 20px 10px; }
+        padding: 20px 10px;
+        font-size: 20px;
+        font-weight: 700; }
       .main .content .goods .good {
         width: 350px;
         height: fit-content;
