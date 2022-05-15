@@ -1,0 +1,1 @@
+json-server --watch goods.json --port 3001

@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', printGood);
+var good;
 
 function printGood() {
+	const queryTypes = ['drums','stringed','wind','keyboards','bowed','dj','folk','other'];
+	const rusQueryTypes = ['Ударные','Струнные','Духовые','Клавишные','Смычковые','DJ','Народные','Прочее'];
 	const search = window.location.search;
 	const categoryType = search.slice(1, search.indexOf('&'));
 	let goodId = +search.replace('?' + categoryType + '&good=', '') - 1;
@@ -17,32 +20,96 @@ function printGood() {
 	});
 
 	function appendData(data) {
-		header_main.innerHTML = `<a href="../../main.html">MusicSoul</a> / <a href="goodsCatalog.html?${categoryType}">${categoryType}</a> / ${data[goodId]["type"] + " " + data[goodId]["title"]}`;
-		good_img.src = data[goodId]["img"];
-		price.innerText = data[goodId]["price"];
-		producer.innerText += " " + data[goodId]["producer"];
-		country.innerText += " " + data[goodId]["origin_country"];
-		guarantee.innerText += " " + data[goodId]["guarantee"];
+		good = data[goodId];
 
-		data[goodId]["description"].forEach(elem => description.innerHTML += `<p>${elem}</p>`);
-		description.innerHTML += '<p>Особенности:</p><ul class="features_list" id="features_list"></ul>';
-		data[goodId]["features"].forEach(elem => features_list.innerHTML += `<li>${elem}</li>`);
+		document.getElementById('add_basket').addEventListener('click', addBasket);
+		document.head.querySelector('title').innerText = `MusicSoul - ${good["type"]} ${good["title"]}`;
+		
+		header_main.innerHTML = `<a href="../../main.html">MusicSoul</a> / <a href="catalog.html?${categoryType}">${rusQueryTypes[queryTypes.indexOf(categoryType)]}</a> / ${good["type"] + " " + good["title"]}`;
+		good_img.src = good["img"];
+		price.innerText = good["price"];
+		producer.innerText += " " + good["producer"];
+		country.innerText += " " + good["origin_country"];
+		guarantee.innerText += " " + good["guarantee"];
+
+		good["description"].forEach(elem => description.innerHTML += `<p>${elem}</p>`);
+		description.innerHTML += '<p class="features_header">Особенности:</p><ul class="features_list" id="features_list"></ul>';
+		good["features"].forEach(elem => features_list.innerHTML += `<li>${elem}</li>`);
 
 		++goodId;
 
 		for (let i = 1; i <= 4; i++) {
 			goodId = (goodId + 1 === data.length + 1) ? 1 : goodId + 1;
 			goods_catalog.innerHTML += `<div class="good">
-						    				<a href="good.html?${categoryType}&good=${goodId}"><img src="${data[goodId - 1]["img"]}" alt="Товар" /></a>
-						    				<p class="good_title"><a href="good.html?${categoryType}&good=${goodId}">${data[goodId - 1]["type"]} ${data[goodId - 1]["title"]}</a></p>
-						    				<strong class="good_price"><span>${data[goodId - 1]["price"]}</span></strong>
-						    			</div>`;
+    				<a href="good.html?${categoryType}&good=${data[goodId - 1]["id"]}">
+    					<img src="${data[goodId - 1]["img"]}" alt="Picture" />
+	    				<p class="good_title">${data[goodId - 1]["type"]} ${data[goodId - 1]["title"]}</p>
+	    				<span class="good_price">${data[goodId - 1]["price"]}</span>
+    				</a>
+    			</div>
+    		`;
 		}
 	}
 }
 
-/*
+function addBasket() {
+	fetch(`http://localhost:3001/basket`)
+	.then(function (response) {
+		return response.json();
+	})
+	.then(function (data) {
+		postGood(data);
+	})
+	.catch(function (err) {
+		console.log('error: ' + err);
+	});
 
-<ul class="features_list" id="features_list">
-</ul>
+	function postGood(data) {
+		const basket = data;
+		const body = {
+			img: good["img"],
+			title: good["title"],
+			producer: good["producer"],
+			origin_country: good["origin_country"],
+			price: good["price"],
+			item_of: good["item_of"],
+			good_id: good["id"]
+		};
+
+		let alsoInBasket = false;
+
+		basket.forEach(elem => {
+			const objectOne = `${body["good_id"]} ${body["item_of"]}`;
+			const objectTwo = `${elem["good_id"]} ${elem["item_of"]}`;
+
+			if (JSON.stringify(objectOne) === JSON.stringify(objectTwo)) alsoInBasket = true;
+		});
+
+		if (!alsoInBasket)
+		{
+			let response = fetch('http://localhost:3001/basket', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json;charset=utf-8'
+				},
+				body: JSON.stringify(body)
+			});
+			alert('Товар добавлен в корзину');
+		}
+		else
+		{
+			alert('Товар уже в корзине');
+		}
+	}
+	
+}
+
+/*
+let response = await fetch('http://localhost:3001/basket', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json;charset=utf-8'
+		},
+		body: JSON.stringify(user)
+	})
  */

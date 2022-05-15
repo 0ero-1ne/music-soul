@@ -117,9 +117,9 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        margin-bottom: 40px; }
+        margin-bottom: 40px;
+        gap: 20px; }
         .main .content .main_reputation .musical_groups .musical_group {
-          margin: 10px 20px;
           text-align: center;
           transition: ease-in-out 0.5s;
           cursor: pointer; }
