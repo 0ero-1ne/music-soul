@@ -23,6 +23,7 @@ function printGood() {
 		good = data[goodId];
 
 		document.getElementById('add_basket').addEventListener('click', addBasket);
+		document.getElementById('add_wish').addEventListener('click', addWish);
 		document.head.querySelector('title').innerText = `MusicSoul - ${good["type"]} ${good["title"]}`;
 		
 		header_main.innerHTML = `<a href="../../main.html">MusicSoul</a> / <a href="catalog.html?${categoryType}">${rusQueryTypes[queryTypes.indexOf(categoryType)]}</a> / ${good["type"] + " " + good["title"]}`;
@@ -99,6 +100,58 @@ function addBasket() {
 		else
 		{
 			alert('Товар уже в корзине');
+		}
+	}
+	
+}
+
+function addWish() {
+	fetch(`http://localhost:3001/wishlist`)
+	.then(function (response) {
+		return response.json();
+	})
+	.then(function (data) {
+		postGood(data);
+	})
+	.catch(function (err) {
+		console.log('error: ' + err);
+	});
+
+	function postGood(data) {
+		const wishlist = data;
+		const body = {
+			img: good["img"],
+			title: good["title"],
+			producer: good["producer"],
+			origin_country: good["origin_country"],
+			price: good["price"],
+			item_of: good["item_of"],
+			good_id: good["id"]
+		};
+
+		let alsoInWishes = false;
+
+		wishlist.forEach(elem => {
+			const objectOne = `${body["good_id"]} ${body["item_of"]}`;
+			const objectTwo = `${elem["good_id"]} ${elem["item_of"]}`;
+
+			if (JSON.stringify(objectOne) === JSON.stringify(objectTwo)) alsoInWishes = true;
+		});
+
+		if (!alsoInWishes)
+		{
+			let response = fetch('http://localhost:3001/wishlist', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json;charset=utf-8'
+				},
+				body: JSON.stringify(body)
+			});
+			alert('Товар добавлен в избранное');
+		}
+		else
+		{
+			alert('Товар уже в избранных');
 		}
 	}
 	

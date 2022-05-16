@@ -1476,5 +1476,57 @@
     }
   ],
   "basket": [
+    {
+      "img": "https://musicmarket.by/images/thumbnails/460/460/detailed/36/hohner_marine_band_1896-20_c_1.jpg.jpg",
+      "title": "Hohner Marine Band 1896/20 C",
+      "producer": "Hohner",
+      "origin_country": "Германия",
+      "price": "130.62 руб./шт.",
+      "item_of": "wind",
+      "good_id": 3,
+      "id": 1
+    },
+    {
+      "img": "https://musicmarket.by/images/thumbnails/460/460/detailed/4/9F67EF1AA1ED6A46900C2439F337ECC1_LRG.jpg.jpg",
+      "title": "Peace Prodigy DP-109BK-22 White",
+      "producer": "Peace",
+      "origin_country": "Тайвань",
+      "price": "1 920.00 руб./шт.",
+      "item_of": "drums",
+      "good_id": 1,
+      "id": 2
+    }
+  ],
+  "wishlist": [
+    {
+      "img": "https://musicmarket.by/images/thumbnails/460/460/detailed/13/6421F9AA1BEB4343B1FBD1B5BC3DBF5B_12073.jpg.jpg",
+      "title": "Yamaha YRS-24B",
+      "producer": "Yamaha",
+      "origin_country": "Индонезия",
+      "price": "35.20 руб./шт.",
+      "item_of": "wind",
+      "good_id": 4,
+      "id": 1
+    },
+    {
+      "img": "https://musicmarket.by/images/ab__webp/thumbnails/460/460/detailed/10/IMG_7326.jpg_jpg.webp",
+      "title": "Flight NUS 310",
+      "producer": "Flight",
+      "origin_country": "Китай",
+      "price": "185.70 руб./шт.",
+      "item_of": "stringed",
+      "good_id": 8,
+      "id": 2
+    },
+    {
+      "img": "https://musicmarket.by/images/ab__webp/thumbnails/460/460/detailed/32/aurus_jh2008-r.jpg_jpg.webp",
+      "title": "Aurus JH2008-R 41/120/7/2",
+      "producer": "Aurus",
+      "origin_country": "Китай",
+      "price": "2 819.94 руб./шт.",
+      "item_of": "folk",
+      "good_id": 5,
+      "id": 3
+    }
   ]
 }

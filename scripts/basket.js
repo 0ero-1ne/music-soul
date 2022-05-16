@@ -33,7 +33,7 @@ function printBasket() {
 							<p id="price">${data[i]["price"]}</p>
 						</div>
 					</a>
-					<div id="delete_good" onclick="deleteGood(event)">Удалить из корзины</div>
+					<div id="delete_good" onclick="deleteGood(event)">Удалить</div>
 				</div>
     		`;
 		}
