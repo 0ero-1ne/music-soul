@@ -16,7 +16,7 @@ function printGood() {
 		appendData(data);
 	})
 	.catch(function (err) {
-		console.log('error: ' + err);
+		window.location.replace("../../main.html");
 	});
 
 	function appendData(data) {
