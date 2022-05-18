@@ -1485,6 +1485,36 @@
       "item_of": "drums",
       "good_id": 1,
       "id": 2
+    },
+    {
+      "img": "https://musicmarket.by/images/ab__webp/thumbnails/460/460/detailed/44/cort-af510bks_1.jpg_jpg.webp",
+      "title": "Cort AF510 BKS",
+      "producer": "Cort",
+      "origin_country": "Индонезия",
+      "price": "452.48 руб./шт.",
+      "item_of": "stringed",
+      "good_id": 3,
+      "id": 3
+    },
+    {
+      "img": "https://musicmarket.by/images/thumbnails/460/460/detailed/89/samick-sig50d-ebhp.jpg.jpg",
+      "title": "Samick SIG50D/EBHP",
+      "producer": "Samick",
+      "origin_country": "Индонезия",
+      "price": "46 922.50 руб./шт.",
+      "item_of": "keyboards",
+      "good_id": 4,
+      "id": 4
+    },
+    {
+      "img": "https://pop-music.ru/upload/iblock/25a/25ac8e430a2385e487c743cdf051a862.jpg",
+      "title": "Leonty 5BN",
+      "producer": "Leonty",
+      "origin_country": "Беларусь",
+      "price": "17.20 руб./пара",
+      "item_of": "drums",
+      "good_id": 7,
+      "id": 5
     }
   ],
   "wishlist": [

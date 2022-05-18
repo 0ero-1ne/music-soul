@@ -15,11 +15,6 @@ function printBasket() {
 	function appendData(data) {
 		const wrapper = document.getElementById('goods');
 
-		if (data.length === 0) {
-			wrapper.innerHTML = "<div class='shopping_button'><a href='../../main.html'>Вперёд за покупками</a></div>";
-			return;
-		}
-
 		for (let i = 0; i < data.length; i++) {
     		wrapper.innerHTML += `
     			<div class="good" id="${data[i]["id"]}">
@@ -37,6 +32,8 @@ function printBasket() {
 				</div>
     		`;
 		}
+
+		wrapper.innerHTML += "<div class='shopping_button'><a href='../../main.html'>Вперёд за покупками</a></div>";
 
 		return;
 	}
